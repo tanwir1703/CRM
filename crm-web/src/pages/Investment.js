@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 const Investment = () => {
   const [investmentType, setInvestmentType] = useState('One-Time');
@@ -64,6 +65,23 @@ const Investment = () => {
         'By donating, you can assist in providing assistive devices, accessibility infrastructure, rehabilitation, and vocational training for people with disabilities.',
     },
   ];
+
+  const handlePayNow = async () => {
+    const userEmail = localStorage.getItem('userEmail');
+    const donationData = {
+      email: userEmail, // Send email from localStorage
+      donations: amounts // Send the amounts for each cause
+    };
+  
+    try {
+      await axios.post('/api/send-confirmation', donationData);
+      alert('Payment confirmed and email sent!');
+    } catch (error) {
+      console.error('Error sending confirmation email:', error);
+      alert('Failed to send email.');
+    }
+  };
+  
 
   return (
     <div>
