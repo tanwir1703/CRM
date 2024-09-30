@@ -1,0 +1,32 @@
+/* Import Tailwind's base styles, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+/* Additional custom styles (optional) */
+
+/* You can add any global styles here if needed */
+body {
+}
+
+/* Ensures the layout fits well on all screens */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll behavior for all scrollable elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Example styling for buttons to add some animation */
+button {
+  @apply transition-transform duration-200 ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

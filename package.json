@@ -1,0 +1,27 @@
+{
+  "name": "crm-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanwir1703/CRM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanwir1703/CRM/issues"
+  },
+  "homepage": "https://github.com/tanwir1703/CRM#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "create-react-app": "^5.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "razorpay": "^2.9.4"
+  }
+}
